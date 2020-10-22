@@ -19,9 +19,9 @@ class HomePage(BasePage):
         self.click_action(self.filter_btn, 10)
 
     def select_filter_status(self, status):
-        self.click_action(self.request_status_cbo)
+        self.click_action(self.request_status_cbo, 10)
         if status == 'Inactive':
-            self.click_action(self.select_inactive_btn)
+            self.click_action(self.select_inactive_btn, 10)
 
     def apply_filter(self):
         self.click_action(self.apply_filter_btn, 10)
@@ -39,7 +39,7 @@ class HomePage(BasePage):
         self.click_action(self.sort_arrow_xpath, 10)
 
     def sort_ascending(self):
-        self.click_action(self.sort_arrow_xpath, 10)
+        # self.click_action(self.sort_arrow_xpath, 10)
         self.click_action(self.sort_caret_xpath, 10)
 
     def get_first_name_list(self):
