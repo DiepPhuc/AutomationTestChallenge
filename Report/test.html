@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>test.html</h1>
-    <p>Report generated on 22-Oct-2020 at 03:42:14 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 22-Oct-2020 at 14:08:54 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,8 +259,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.8.5</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 1.72 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 12.17 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,22 +271,18 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">APITests/test_API.py::test_sending_valid</td>
-          <td class="col-duration">0.73</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">Tests/test_FilterFunction.py::TestFilter::test_filter_inactive_status[chrome]</td>
+          <td class="col-duration">9.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">APITests/test_API.py::test_content_type</td>
-          <td class="col-duration">0.90</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>application/json; charset=utf-8
-<br/></div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;Tests.test_FilterFunction.TestFilter object at 0x7f9ed55ca1c0&gt;<br/><br/>    def test_filter_inactive_status(self):<br/>        self.loginPage = LoginPage(self.driver)<br/>        self.homePage = HomePage(self.driver)<br/>    <br/>        # Login Action<br/>        self.loginPage.set_account_info(TestData.USER_NAME, TestData.PASSWORD)<br/>        self.loginPage.click_login()<br/>    <br/>        # Filter Inactive status and verify<br/>        self.homePage.click_filter_btn()<br/>        self.homePage.select_filter_status(TestData.INACTIVE_STATUS)<br/>        self.homePage.apply_filter()<br/>        status_list = self.homePage.verify_filter_status()<br/>        for actual_status in status_list:<br/>&gt;           assert actual_status == TestData.INACTIVE_STATUS, &quot;Status doesn&#x27;t contain only Inactive&quot;<br/><span class="error">E           AssertionError: Status doesn&#x27;t contain only Inactive</span><br/><span class="error">E           assert &#x27;Approved&#x27; == &#x27;Inactive&#x27;</span><br/><span class="error">E             - Inactive</span><br/><span class="error">E             + Approved</span><br/><br/>Tests/test_FilterFunction.py:23: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/> 
+<br/> -----------------------------Captured stderr setup------------------------------ <br/>[WDM] - Current google-chrome version is 86.0.4240
+[WDM] - Get LATEST driver version for 86.0.4240
+[WDM] - Driver [/Users/macbookpro/.wdm/drivers/chromedriver/mac64/86.0.4240.22/chromedriver] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>[32mINFO    [0m WDM:logger.py:24 Current google-chrome version is 86.0.4240
+[32mINFO    [0m WDM:logger.py:14 Get LATEST driver version for 86.0.4240
+[32mINFO    [0m WDM:logger.py:14 Driver [/Users/macbookpro/.wdm/drivers/chromedriver/mac64/86.0.4240.22/chromedriver] found in cache<br/></div></td></tr></tbody></table></body></html>

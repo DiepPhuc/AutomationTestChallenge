@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>test_api.html</h1>
-    <p>Report generated on 22-Oct-2020 at 05:34:25 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 22-Oct-2020 at 14:16:22 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,7 +259,7 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.8.5</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 2.87 seconds. </p>
+    <p>3 tests ran in 2.68 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -275,17 +275,16 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">APITests/test_API.py::TestAPI::test_status_code</td>
-          <td class="col-duration">0.99</td>
+          <td class="col-duration">1.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>HTTP error occurred: 404 Client Error: Not Found for url: https://my-json-server.typicode.com/typicode/demo/posts/9
-<br/></div></td></tr></tbody>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">APITests/test_API.py::TestAPI::test_content_type</td>
-          <td class="col-duration">0.77</td>
+          <td class="col-duration">0.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -294,8 +293,9 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">APITests/test_API.py::TestAPI::test_response_body_data</td>
-          <td class="col-duration">0.80</td>
+          <td class="col-duration">0.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>{&#x27;Date&#x27;: &#x27;Thu, 22 Oct 2020 07:16:24 GMT&#x27;, &#x27;Content-Type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;Content-Length&#x27;: &#x27;34&#x27;, &#x27;Connection&#x27;: &#x27;keep-alive&#x27;, &#x27;Set-Cookie&#x27;: &#x27;__cfduid=df91e3b11660cfb32c00e7d5cded44eb91603350983; expires=Sat, 21-Nov-20 07:16:23 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax&#x27;, &#x27;X-Powered-By&#x27;: &#x27;Express&#x27;, &#x27;Vary&#x27;: &#x27;Origin, Accept-Encoding&#x27;, &#x27;Access-Control-Allow-Credentials&#x27;: &#x27;true&#x27;, &#x27;Cache-Control&#x27;: &#x27;no-cache&#x27;, &#x27;Pragma&#x27;: &#x27;no-cache&#x27;, &#x27;Expires&#x27;: &#x27;-1&#x27;, &#x27;X-Content-Type-Options&#x27;: &#x27;nosniff&#x27;, &#x27;Etag&#x27;: &#x27;W/&quot;22-ORE+sIpA7k7Lz7HudwoA9jNFWEk&quot;&#x27;, &#x27;Via&#x27;: &#x27;1.1 vegur&#x27;, &#x27;CF-Cache-Status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;cf-request-id&#x27;: &#x27;05f0c38d2a0000094a731de000000001&#x27;, &#x27;Expect-CT&#x27;: &#x27;max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;&#x27;, &#x27;Report-To&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report?lkg-colo=233&amp;lkg-time=1603350985&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;NEL&#x27;: &#x27;{&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;Server&#x27;: &#x27;cloudflare&#x27;, &#x27;CF-RAY&#x27;: &#x27;5e616ec1daa0094a-HAN&#x27;}
+<br/></div></td></tr></tbody></table></body></html>
