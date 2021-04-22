@@ -13,12 +13,18 @@ class TestLogin(BaseTest):
         self.loginPage.set_account_info("phucdiep170794@gmail.com", "Test987654123@")
         self.loginPage.click_login()
 
-        actual_title = self.homePage.get_home_page_title()
-        assert actual_title == 'Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights & More'
+        self.loginPage.verify_status("Signed in successfully.")
 
     def test_log_in_with_invalid_data(self):
         self.loginPage = LoginPage(self.driver)
         self.loginPage.set_account_info("asdcasdc@gmail.com", "Test987654123@")
         self.loginPage.click_login()
-        self.loginPage.verify_error('You may have entered an unknown email address or an incorrect password.')
 
+        self.loginPage.verify_status("Invalid Email or password.")
+
+    def test_log_in_with_blank_data(self):
+        self.loginPage = LoginPage(self.driver)
+        self.loginPage.set_account_info("", "")
+        self.loginPage.click_login()
+
+        self.loginPage.verify_status("Invalid Email or password.")

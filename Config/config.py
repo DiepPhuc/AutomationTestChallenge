@@ -1,2 +1,2 @@
 class TestData:
-    BASE_URL = 'https://www.expedia.com/user/signin'
+    BASE_URL = 'https://home.openweathermap.org/users/sign_in'

@@ -7,10 +7,10 @@ from PageObject.BasePage import BasePage
 
 
 class LoginPage(BasePage):
-    email_locator = (By.XPATH, '//*[@id="signin-loginid"]')
-    password_locator = (By.XPATH, '//*[@id="signin-password"]')
-    login_btn = (By.XPATH, '//*[@id="submitButton"]')
-    email_error = (By.XPATH, '//*[@class="alert-message""]')
+    email_locator = (By.XPATH, '//*[@id="user_email"]')
+    password_locator = (By.XPATH, '//*[@id="user_password"]')
+    login_btn = (By.XPATH, '//*[@value="Submit"]')
+    status = (By.XPATH, '//*[@class="panel-body"]')
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -24,6 +24,10 @@ class LoginPage(BasePage):
         self.click_action(self.login_btn, 10)
 
     def verify_error(self, expected_error):
-        actual_error = self.BasePage.get_element_text(self.email_error)
+        actual_error = self.get_element_text(self.email_error)
         assert expected_error in actual_error, "Text not found %s" % expected_error
+
+    def verify_status(self, expected_status):
+        actual_status = self.get_element_text(self.status)
+        assert actual_status in expected_status
 
