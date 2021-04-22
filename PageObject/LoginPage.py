@@ -23,10 +23,6 @@ class LoginPage(BasePage):
     def click_login(self):
         self.click_action(self.login_btn, 10)
 
-    def verify_error(self, expected_error):
-        actual_error = self.get_element_text(self.email_error)
-        assert expected_error in actual_error, "Text not found %s" % expected_error
-
     def verify_status(self, expected_status):
         actual_status = self.get_element_text(self.status)
         assert actual_status in expected_status
