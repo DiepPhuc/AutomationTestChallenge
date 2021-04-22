@@ -20,9 +20,10 @@ class BasePage:
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).send_keys(text)
 
     def get_element_text(self, by_locator):
-        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+        element = WebDriverWait(self.driver, 15).until(EC.visibility_of_element_located(by_locator))
         return element.text
 
-    def get_title(self, title):
+    def get_title(self, title, main_region):
+        WebDriverWait(self.driver, 15).until(EC.visibility_of_element_located(self.main_region))
         WebDriverWait(self.driver, 10).until(EC.title_is(title))
         return self.driver.title
